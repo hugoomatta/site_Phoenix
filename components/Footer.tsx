@@ -1,4 +1,5 @@
-const WHATSAPP_URL = 'https://wa.me/5541992656337'
+import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+
 const WHATSAPP_DISPLAY = '(41) 99265-6337'
 
 const footerColumns = [
@@ -24,7 +25,7 @@ const footerColumns = [
   {
     title: 'Contato',
     links: [
-      { label: `WhatsApp ${WHATSAPP_DISPLAY}`, href: WHATSAPP_URL },
+      { label: `WhatsApp ${WHATSAPP_DISPLAY}`, href: DEFAULT_WHATSAPP_URL },
       { label: 'Instagram', href: 'https://www.instagram.com/phoenix_imports_e_imports/' },
       { label: 'YouTube', href: 'https://www.youtube.com/channel/UCqhpJ8IcqKOrbmPqtn7R3bg' },
       { label: 'Facebook', href: 'https://www.facebook.com/p/Phoenix-Imports-Imports-61552080106435/' },
@@ -34,7 +35,7 @@ const footerColumns = [
 
 export default function Footer(){
   return (
-    <footer className="mt-12 border-t border-red-950/40 bg-black py-10">
+    <footer className="mt-12 border-t border-red-950/40 bg-black pb-28 pt-10 md:pb-10">
       <div className="container">
         <div className="grid gap-8 md:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr]">
           <div>

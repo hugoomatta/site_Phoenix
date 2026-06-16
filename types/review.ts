@@ -11,7 +11,7 @@ export type ReviewsResponse = {
   reviews: Review[]
   rating?: number
   total?: number
-  source: 'google' | 'mock'
+  source: 'google' | 'mock' | 'unavailable'
   placeName?: string
   googleMapsUrl?: string
 }

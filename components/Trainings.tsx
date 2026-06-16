@@ -1,4 +1,4 @@
-const WHATSAPP_URL = 'https://wa.me/5541992656337'
+import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
 
 const trainings = [
   {
@@ -40,7 +40,7 @@ export default function Trainings(){
           </p>
         </div>
         <div className="lg:text-right">
-          <a className="btn-primary inline-block" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Conhecer treinamentos Phoenix</a>
+          <a className="btn-primary inline-block" href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer">Conhecer treinamentos Phoenix</a>
           <p className="mt-3 text-sm text-gray-400">Treinamentos para mecânicos, oficinas e profissionais que buscam evolução técnica.</p>
         </div>
       </div>

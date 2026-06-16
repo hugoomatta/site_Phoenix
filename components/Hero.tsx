@@ -1,5 +1,7 @@
+import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+
 const badges = [
-  'Nº1 do Brasil em Mecatrônicas',
+  'Referência Nacional em Mecatrônicas',
   'DSG DQ200 • DQ250 • Audi/VW',
   'Powershift • GM 6T30 • Multimarcas',
   'Audi • Mercedes • BMW • Premium',
@@ -124,8 +126,8 @@ export default function Hero(){
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#contact" className="btn-primary text-center">Diagnosticar meu câmbio</a>
-              <a href="#services" className="btn-ghost text-center">Conheça nossas Soluções</a>
+              <a href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-primary text-center">Diagnosticar meu câmbio</a>
+              <a href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-ghost text-center">Conheça nossas Soluções</a>
             </div>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
               Seu câmbio apresentou falha? Evite substituições caras antes de um diagnóstico especializado.

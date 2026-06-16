@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-const WHATSAPP_URL = 'https://wa.me/5541992656337'
+import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
 
 export default function Header(){
   return (
@@ -28,10 +27,10 @@ export default function Header(){
           <Link href="#about">Sobre</Link>
           <Link href="#videos">Vídeos</Link>
           <Link href="#contact">Contato</Link>
-          <a href={WHATSAPP_URL} className="ml-4 btn-primary">Falar no WhatsApp</a>
+          <a href={DEFAULT_WHATSAPP_URL} className="ml-4 btn-primary" target="_blank" rel="noreferrer">Falar com Especialista</a>
         </nav>
         <div className="md:hidden">
-          <a href={WHATSAPP_URL} className="btn-primary">WhatsApp</a>
+          <a href={DEFAULT_WHATSAPP_URL} className="btn-primary" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </div>
     </header>
