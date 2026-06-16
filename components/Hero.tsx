@@ -110,8 +110,8 @@ export default function Hero(){
           <div className="max-w-4xl">
             <div className="text-sm font-semibold uppercase tracking-wide text-red-400">Centro Técnico de Alta Performance</div>
             <h1 className="mt-4 max-w-4xl text-[2.35rem] font-extrabold leading-[1.05] sm:text-5xl lg:text-[3.35rem]">
-              <span className="block">Referência Nacional em</span>
-              <span className="block">Mecatrônicas Automotivas</span>
+              <span className="block">Referência Nacional</span>
+              <span className="block">em Mecatrônicas Automotivas</span>
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-300 md:text-lg">
               Diagnóstico avançado, reparação de módulos eletrônicos e soluções para transmissões automáticas de veículos nacionais, importados e premium.
