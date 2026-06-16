@@ -1,4 +1,4 @@
-import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+import { generalWhatsAppUrl } from '../utils/whatsapp'
 
 const WHATSAPP_DISPLAY = '(41) 99265-6337'
 
@@ -25,7 +25,7 @@ const footerColumns = [
   {
     title: 'Contato',
     links: [
-      { label: `WhatsApp ${WHATSAPP_DISPLAY}`, href: DEFAULT_WHATSAPP_URL },
+      { label: `WhatsApp ${WHATSAPP_DISPLAY}`, href: generalWhatsAppUrl },
       { label: 'Instagram', href: 'https://www.instagram.com/phoenix_imports_e_imports/' },
       { label: 'YouTube', href: 'https://www.youtube.com/channel/UCqhpJ8IcqKOrbmPqtn7R3bg' },
       { label: 'Facebook', href: 'https://www.facebook.com/p/Phoenix-Imports-Imports-61552080106435/' },

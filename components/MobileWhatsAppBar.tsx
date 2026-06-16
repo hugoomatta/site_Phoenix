@@ -1,9 +1,9 @@
-import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+import { diagnosticWhatsAppUrl } from '../utils/whatsapp'
 
 export default function MobileWhatsAppBar(){
   return (
     <a
-      href={DEFAULT_WHATSAPP_URL}
+      href={diagnosticWhatsAppUrl}
       target="_blank"
       rel="noreferrer"
       className="fixed inset-x-3 bottom-3 z-[80] flex min-h-14 items-center justify-center gap-2 rounded-md bg-[#c5162e] px-4 py-3 text-center text-sm font-bold text-white shadow-2xl shadow-black/50 ring-1 ring-white/10 md:hidden"

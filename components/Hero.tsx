@@ -1,4 +1,4 @@
-import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+import { diagnosticWhatsAppUrl, generalWhatsAppUrl } from '../utils/whatsapp'
 
 const badges = [
   'Referência Nacional em Mecatrônicas',
@@ -126,8 +126,8 @@ export default function Hero(){
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-primary text-center">Diagnosticar meu câmbio</a>
-              <a href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-ghost text-center">Conheça nossas Soluções</a>
+              <a href={diagnosticWhatsAppUrl} target="_blank" rel="noreferrer" className="btn-primary text-center">Diagnosticar meu câmbio</a>
+              <a href={generalWhatsAppUrl} target="_blank" rel="noreferrer" className="btn-ghost text-center">Conheça nossas Soluções</a>
             </div>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
               Seu câmbio apresentou falha? Evite substituições caras antes de um diagnóstico especializado.

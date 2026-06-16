@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { AUTHORITY_STATS, LAB_FEATURES, SERVICE_CATEGORIES, type ServiceIcon, type ServiceCategory } from '../data/services'
-import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+import { diagnosticWhatsAppUrl } from '../utils/whatsapp'
 
 function ServiceIconGraphic({ type }: { type: ServiceIcon }){
   const common = 'stroke-current'
@@ -215,7 +215,7 @@ export default function Services(){
                   <h4 className="font-semibold">Seu veículo apresentou falha no câmbio?</h4>
                   <p className="mt-1 text-sm text-gray-300">Antes de trocar componentes caros, consulte nossos especialistas.</p>
                 </div>
-                <a href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-primary text-center">Solicitar diagnóstico especializado</a>
+                <a href={diagnosticWhatsAppUrl} target="_blank" rel="noreferrer" className="btn-primary text-center">Solicitar diagnóstico especializado</a>
               </div>
             )}
           </div>

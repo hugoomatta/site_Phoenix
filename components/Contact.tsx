@@ -1,5 +1,5 @@
 import type { FormEvent } from 'react'
-import { DEFAULT_WHATSAPP_URL, buildWhatsAppUrl } from '../lib/whatsapp'
+import { buildWhatsAppUrl, diagnosticWhatsAppUrl } from '../utils/whatsapp'
 
 const WHATSAPP_DISPLAY = '(41) 99265-6337'
 const ADDRESS = 'R. Isaías Régis de Miranda, 1760 - Boqueirão, Curitiba - PR'
@@ -69,14 +69,14 @@ Código de falha: ${faultCode || 'Não informado'}`
             </div>
             <div className="mt-5">
               <h3 className="font-semibold">WhatsApp</h3>
-              <a className="mt-2 block text-sm text-gray-300 hover:text-white" href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer">
+              <a className="mt-2 block text-sm text-gray-300 hover:text-white" href={diagnosticWhatsAppUrl} target="_blank" rel="noreferrer">
                 {WHATSAPP_DISPLAY}
               </a>
               <h3 className="mt-5 font-semibold">Endereço</h3>
               <a className="mt-2 block text-sm text-gray-300 hover:text-white" href={MAPS_URL} target="_blank" rel="noreferrer">
                 {ADDRESS}
               </a>
-              <a className="btn-ghost mt-4 inline-block" href={DEFAULT_WHATSAPP_URL} target="_blank" rel="noreferrer">Consultar especialista Phoenix</a>
+              <a className="btn-ghost mt-4 inline-block" href={diagnosticWhatsAppUrl} target="_blank" rel="noreferrer">Consultar especialista Phoenix</a>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { DEFAULT_WHATSAPP_URL } from '../lib/whatsapp'
+import { diagnosticWhatsAppUrl, generalWhatsAppUrl } from '../utils/whatsapp'
 
 export default function Header(){
   return (
@@ -27,10 +27,10 @@ export default function Header(){
           <Link href="#about">Sobre</Link>
           <Link href="#videos">Vídeos</Link>
           <Link href="#contact">Contato</Link>
-          <a href={DEFAULT_WHATSAPP_URL} className="ml-4 btn-primary" target="_blank" rel="noreferrer">Falar com Especialista</a>
+          <a href={diagnosticWhatsAppUrl} className="ml-4 btn-primary" target="_blank" rel="noreferrer">Falar com Especialista</a>
         </nav>
         <div className="md:hidden">
-          <a href={DEFAULT_WHATSAPP_URL} className="btn-primary" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href={generalWhatsAppUrl} className="btn-primary" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </div>
     </header>
