@@ -22,7 +22,8 @@ export default function GoogleReviews({ response }: { response: ReviewsResponse 
   const displayRating = rating ?? 0
   const displayTotal = total ?? reviews.length
   const isGoogleLive = source === 'google'
-  const hasGoogleData = isGoogleLive && Boolean(displayRating || reviews.length)
+  const isMock = source === 'mock'
+  const hasReviewData = Boolean(displayRating || reviews.length)
 
   return (
     <section className="scroll-mt-24">
@@ -38,7 +39,7 @@ export default function GoogleReviews({ response }: { response: ReviewsResponse 
         <div className="rounded-lg border border-red-900/40 bg-[radial-gradient(circle_at_18%_0%,rgba(220,38,38,0.20),transparent_32%),linear-gradient(135deg,rgba(17,24,39,0.86),rgba(0,0,0,0.94))] p-6 shadow-2xl shadow-red-950/20">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              {hasGoogleData ? (
+              {hasReviewData ? (
                 <>
                   <div className="text-6xl font-extrabold leading-none">{displayRating.toFixed(1)}</div>
                   <div className="mt-2"><Stars n={Math.round(displayRating)} /></div>
@@ -63,7 +64,7 @@ export default function GoogleReviews({ response }: { response: ReviewsResponse 
         </div>
       </div>
 
-      {isGoogleLive && reviews.length > 0 && (
+      {reviews.length > 0 && (
         <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
           {reviews.map((r,idx)=> (
             <article key={`${r.authorName}-${idx}`} className="rounded-lg border border-white/10 bg-white/[0.055] p-5 shadow-lg shadow-black/30 backdrop-blur-md transition hover:border-red-700/70 hover:bg-red-950/20">
@@ -89,7 +90,9 @@ export default function GoogleReviews({ response }: { response: ReviewsResponse 
       )}
 
       <p className="mt-4 text-sm text-gray-500">
-        {isGoogleLive ? 'Dados carregados diretamente do Google Places.' : 'Integração preparada para Google Places sem exibir avaliações fictícias.'}
+        {isGoogleLive && 'Dados carregados diretamente do Google Places.'}
+        {isMock && 'Avaliações demonstrativas para apresentação comercial.'}
+        {!isGoogleLive && !isMock && 'Integração preparada para Google Places.'}
       </p>
     </section>
   )

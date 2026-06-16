@@ -169,19 +169,15 @@ function fetchMockPlaceDetails(): ReviewsResponse {
   return { reviews, rating, total, source: 'mock' }
 }
 
-function unavailablePlaceDetails(): ReviewsResponse {
-  return { reviews: [], source: 'unavailable' }
-}
-
 export async function getReviews(): Promise<ReviewsResponse>{
   if(cache && (Date.now() - cache.ts) < CACHE_TTL) return cache.data
 
   const apiKey = process.env.GOOGLE_PLACES_API_KEY
   const placeId = process.env.GOOGLE_PLACE_ID
-  const forceMock = process.env.USE_MOCK_PLACES === 'true' && process.env.NODE_ENV !== 'production'
+  const forceMock = process.env.USE_MOCK_PLACES === 'true'
 
   const result = !forceMock ? await fetchFromGoogle(apiKey, placeId) : null
-  const data = result || (forceMock ? fetchMockPlaceDetails() : unavailablePlaceDetails())
+  const data = result || fetchMockPlaceDetails()
 
   cache = { ts: Date.now(), data }
   return data
