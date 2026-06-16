@@ -1,7 +1,7 @@
 import { diagnosticWhatsAppUrl, generalWhatsAppUrl } from '../utils/whatsapp'
 
 const badges = [
-  'Referência Nacional em Mecatrônicas',
+  'Reparo de módulos e transmissões',
   'DSG DQ200 • DQ250 • Audi/VW',
   'Powershift • GM 6T30 • Multimarcas',
   'Audi • Mercedes • BMW • Premium',
