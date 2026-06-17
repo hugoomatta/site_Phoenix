@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hugoomatta.github.io/site_Phoenix/sitemap.xml
