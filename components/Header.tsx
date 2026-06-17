@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { diagnosticWhatsAppUrl, generalWhatsAppUrl } from '../utils/whatsapp'
+import { publicAssetPath } from '../utils/assets'
 
 export default function Header(){
   return (
@@ -8,7 +9,7 @@ export default function Header(){
       <div className="container flex items-center justify-between py-4">
         <Link href="#top" className="flex items-center gap-3">
           <Image
-            src="/phoenix-logo.jpg"
+            src={publicAssetPath('/phoenix-logo.jpg')}
             alt="Phoenix Imports e Imports"
             width={64}
             height={64}

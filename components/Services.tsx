@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { AUTHORITY_STATS, LAB_FEATURES, SERVICE_CATEGORIES, type ServiceIcon, type ServiceCategory } from '../data/services'
 import { diagnosticWhatsAppUrl } from '../utils/whatsapp'
+import { publicAssetPath } from '../utils/assets'
 
 function ServiceIconGraphic({ type }: { type: ServiceIcon }){
   const common = 'stroke-current'
@@ -126,7 +127,7 @@ export default function Services(){
 
         <div className="relative min-h-[26rem] overflow-hidden rounded-lg border border-red-900/50 bg-gray-950 shadow-2xl shadow-red-950/20 motion-safe:animate-[fadeIn_700ms_ease-out]">
           <Image
-            src="/technical-lab.png"
+            src={publicAssetPath('/technical-lab.png')}
             alt="Laboratório técnico automotivo com módulos, placas eletrônicas e componentes de transmissão"
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"

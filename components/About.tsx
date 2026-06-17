@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { publicAssetPath } from '../utils/assets'
 
 const highlights = [
   'Mecatrônica automotiva',
@@ -13,7 +14,7 @@ export default function About(){
       <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className="relative min-h-96 overflow-hidden rounded-lg border border-red-900/40 bg-black shadow-2xl shadow-red-950/20">
           <Image
-            src="/phoenix-logo-v2.png"
+            src={publicAssetPath('/phoenix-logo-v2.png')}
             alt="Phoenix Imports & Imports - Tecnologia em alta performance"
             fill
             sizes="(min-width: 1024px) 46vw, 100vw"

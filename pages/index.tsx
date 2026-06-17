@@ -135,8 +135,14 @@ export default function Home({ reviewsResponse, youtubeVideosResponse }: Props) 
 export async function getStaticProps(){
   const reviewsResponse = await getReviews()
   const youtubeVideosResponse = await getYoutubeVideos()
+  const props = { reviewsResponse, youtubeVideosResponse }
+
+  if(process.env.GITHUB_PAGES === 'true'){
+    return { props }
+  }
+
   return {
-    props: { reviewsResponse, youtubeVideosResponse },
+    props,
     revalidate: 1800
   }
 }
